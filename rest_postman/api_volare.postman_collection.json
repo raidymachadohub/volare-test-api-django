@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e106289d-3844-4a18-a637-58e6057af10a",
+		"name": "api_volare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/auth/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"volare123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				},
+				"description": "Autenticação da API com retorno do Token JWT"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/poste/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMTgwMjk5LCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.D11NPJBtUNOLg-RekDuSTX-23_GW0Mh2t-BNzNXLs-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_poste\": \"P8\",\r\n    \"tipo_poste\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/poste/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"poste",
+						""
+					]
+				},
+				"description": "Informações do Endpoint de POST\r\n\r\nPost, Get, Update e Delete"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/ligacao/?p_origem=P1&p_destino=P2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMTgwMjk5LCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.D11NPJBtUNOLg-RekDuSTX-23_GW0Mh2t-BNzNXLs-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_ligacao\": \"L4\",\r\n    \"distancia\": 10,\r\n    \"id_poste_origem\": \"P3\",\r\n    \"id_poste_destino\": \"P5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ligacao/?p_origem=P1&p_destino=P2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ligacao",
+						""
+					],
+					"query": [
+						{
+							"key": "p_origem",
+							"value": "P1"
+						},
+						{
+							"key": "p_destino",
+							"value": "P2"
+						}
+					]
+				},
+				"description": "post, get, update e delete e search\r\n\r\n ligações das ligações "
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
