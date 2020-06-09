@@ -103,7 +103,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/ligacao/?p_origem=P1&p_destino=P2",
+					"raw": "http://127.0.0.1:8000/api/ligacao/way_perfect/?p_origem=P1&p_destino=P5",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -115,6 +115,7 @@
 					"path": [
 						"api",
 						"ligacao",
+						"way_perfect",
 						""
 					],
 					"query": [
@@ -124,7 +125,7 @@
 						},
 						{
 							"key": "p_destino",
-							"value": "P2"
+							"value": "P5"
 						}
 					]
 				},
