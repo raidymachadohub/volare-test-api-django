@@ -40,19 +40,55 @@
 			"response": []
 		},
 		{
+			"name": "http://127.0.0.1:8000/api/poste/P8/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMjc0NzAwLCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.FLlQ3JAqVVsV2FF2grVE_o2c8K8QO3eOLJ6E7V8nWm8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/poste/P8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"poste",
+						"P8",
+						""
+					]
+				},
+				"description": "Exclusão de Poste (DELETE)\r\nRecebe o ID de um Poste e promove sua exclusão"
+			},
+			"response": []
+		},
+		{
 			"name": "http://127.0.0.1:8000/api/poste/",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMTgwMjk5LCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.D11NPJBtUNOLg-RekDuSTX-23_GW0Mh2t-BNzNXLs-U",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMjc0NzAwLCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.FLlQ3JAqVVsV2FF2grVE_o2c8K8QO3eOLJ6E7V8nWm8",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id_poste\": \"P8\",\r\n    \"tipo_poste\": 0\r\n}",
+					"raw": "{\r\n    \"id_poste\": \"P9\",\r\n    \"tipo_poste\": 0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -75,12 +111,84 @@
 						""
 					]
 				},
-				"description": "Informações do Endpoint de POST\r\n\r\nPost, Get, Update e Delete"
+				"description": "Adição de Poste (POST)\r\nRecebe um Poste (JSON) e o salva no banco de dados"
 			},
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/api/ligacao/?p_origem=P1&p_destino=P2",
+			"name": "http://127.0.0.1:8000/api/ligacao/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMjc0NzAwLCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.FLlQ3JAqVVsV2FF2grVE_o2c8K8QO3eOLJ6E7V8nWm8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_ligacao\": \"L1\",\r\n    \"distancia\": 10.00,\r\n    \"id_poste_origem\": \"P4\",\r\n    \"id_poste_destino\": \"P2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ligacao/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ligacao",
+						""
+					]
+				},
+				"description": "Adição de Ligação (POST)\r\nRecebe uma Ligação (JSON) e a salva no banco dados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/ligacao/L6/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMjc0NzAwLCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.FLlQ3JAqVVsV2FF2grVE_o2c8K8QO3eOLJ6E7V8nWm8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ligacao/L6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ligacao",
+						"L6",
+						""
+					]
+				},
+				"description": "Remoção de Ligação (DELETE)\r\nRecebe o ID de uma ligação e a remove do banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/ligacao/way_perfect/?p_origem=P2&p_destino=P4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -89,13 +197,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMTgwMjk5LCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.D11NPJBtUNOLg-RekDuSTX-23_GW0Mh2t-BNzNXLs-U",
+						"value": "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIzMjc0NzAwLCJlbWFpbCI6ImFkbWluQHZvbGFyZS5jb20ifQ.FLlQ3JAqVVsV2FF2grVE_o2c8K8QO3eOLJ6E7V8nWm8",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id_ligacao\": \"L4\",\r\n    \"distancia\": 10,\r\n    \"id_poste_origem\": \"P3\",\r\n    \"id_poste_destino\": \"P5\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -103,7 +211,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/ligacao/way_perfect/?p_origem=P1&p_destino=P5",
+					"raw": "http://127.0.0.1:8000/api/ligacao/way_perfect/?p_origem=P2&p_destino=P4",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -121,15 +229,15 @@
 					"query": [
 						{
 							"key": "p_origem",
-							"value": "P1"
+							"value": "P2"
 						},
 						{
 							"key": "p_destino",
-							"value": "P5"
+							"value": "P4"
 						}
 					]
 				},
-				"description": "post, get, update e delete e search\r\n\r\n ligações das ligações "
+				"description": "Consulta de conectividade (GET)\r\nRecebe dois IDs de Poste (origem e destino) e verifica se existe um caminho que conecta os dois Postes, podendo ou não passar por outros postes.\r\nAs conexões são sempre bi-direcionais"
 			},
 			"response": []
 		}
