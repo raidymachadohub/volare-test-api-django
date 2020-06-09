@@ -15,7 +15,7 @@ grafo = {
     'P2': ['P1', 'P4'],
     'P3': ['P4', 'P5'],
     'P4': ['P2', 'P3'],
-    'P5': ['P3'],
+    'P5': ['P3', 'P6'],
     'P6': ['P7'],
     'P7': ['P6'],
 }
@@ -41,4 +41,4 @@ def bfs(graph_to_search, start, end):
             visited.add(vertex)
 
 
-print(bfs(grafo, 'P1', 'P6'))
+print(bfs(grafo, 'P1', 'P7'))
